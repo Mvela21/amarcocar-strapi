@@ -1,0 +1,20 @@
+{
+  "collectionName": "components_contact_contactinfos",
+  "info": {
+    "displayName": "contactinfo",
+    "icon": "alien"
+  },
+  "options": {},
+  "attributes": {
+    "phone": {
+      "type": "string"
+    },
+    "email": {
+      "type": "email"
+    },
+    "whatsapp": {
+      "type": "string"
+    }
+  },
+  "config": {}
+}
