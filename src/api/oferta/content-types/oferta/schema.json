@@ -4,7 +4,8 @@
   "info": {
     "singularName": "oferta",
     "pluralName": "ofertas",
-    "displayName": "oferta"
+    "displayName": "Oferta",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
@@ -12,55 +13,49 @@
   "pluginOptions": {},
   "attributes": {
     "title": {
-      "type": "string"
+      "type": "string",
+      "required": true
     },
     "brand": {
       "type": "enumeration",
-      "enum": [
-        "seat",
-        "cupra",
-        "all"
-      ]
-    },
-    "validFrom": {
-      "type": "date"
-    },
-    "validTo": {
-      "type": "date"
-    },
-    "priority": {
-      "type": "integer"
-    },
-    "active": {
-      "type": "boolean"
+      "enum": ["seat", "cupra", "all"],
+      "required": true
     },
     "image": {
       "type": "media",
       "multiple": false,
-      "allowedTypes": [
-        "images",
-        "files",
-        "videos",
-        "audios"
-      ]
+      "required": true,
+      "allowedTypes": ["images"]
     },
     "imageMobile": {
       "type": "media",
       "multiple": false,
-      "allowedTypes": [
-        "images",
-        "files",
-        "videos",
-        "audios"
-      ]
+      "required": true,
+      "allowedTypes": ["images"]
+    },
+    "validFrom": {
+      "type": "date",
+      "required": true
+    },
+    "validTo": {
+      "type": "date",
+      "required": true
+    },
+    "priority": {
+      "type": "integer",
+      "required": true,
+      "default": 1
+    },
+    "active": {
+      "type": "boolean",
+      "required": true,
+      "default": true
     },
     "contactInfo": {
       "type": "component",
-      "component": "contact.contactinfo",
-      "repeatable": false
+      "repeatable": false,
+      "component": "shared.contact-info",
+      "required": true
     }
   }
 }
-
-
-
